@@ -7,7 +7,7 @@ methods = {
         'url': '/oapi/documents/details/%(id)s/',
         },
     'categories': {
-        'url': '/oapi/documents/categories/',    
+        'url': '/oapi/documents/categories/',
         },
     'subcategories': {
         'url': '/oapi/documents/subcategories/%(id)s/',
@@ -24,7 +24,7 @@ methods = {
         'optional': ['cat', 'subcat', 'page', 'items'],
         },
     'related': {
-        'url': '/oapi/documents/related/%(id)s/', 
+        'url': '/oapi/documents/related/%(id)s/',
         'required': ['id'],
         'optional': ['page', 'items'],
         },
@@ -136,6 +136,7 @@ methods = {
         },
     'documents_authored': {
         'url': '/oapi/library/documents/authored/',
+        'optional': ['page'],
         'access_token_required': True,
         },
     'documents_starred': {
@@ -152,12 +153,12 @@ methods = {
     'contacts': {
         'url': '/oapi/profiles/contacts/',
         'access_token_required': True,
-        'method': 'get',    
-        }, 
+        'method': 'get',
+        },
     'contacts_of_contact': {
-        'url': '/oapi/profiles/contacts/%(id)s/', 
+        'url': '/oapi/profiles/contacts/%(id)s/',
         'required': ['id'],
-        'access_token_required': True, 
+        'access_token_required': True,
         'method': 'get',
         },
     'add_contact': {
@@ -222,10 +223,10 @@ methods = {
         'access_token_required': True,
         },
     'group_people': {
-        'url': '/oapi/library/groups/%(id)s/people/', 
+        'url': '/oapi/library/groups/%(id)s/people/',
         'required': ['id'],
         'access_token_required': True,
-        },        
+        },
     'create_group': {
         'url': '/oapi/library/groups/',
         'optional': ['group'],
@@ -240,15 +241,15 @@ methods = {
         'expected_status':204,
         },
     'leave_group': {
-        'url': '/oapi/library/groups/%(id)s/leave/', 
+        'url': '/oapi/library/groups/%(id)s/leave/',
         'required': ['id'],
-        'access_token_required': True, 
+        'access_token_required': True,
         'method': 'delete',
         },
     'unfollow_group': {
-        'url': '/oapi/library/groups/%(id)s/unfollow/', 
+        'url': '/oapi/library/groups/%(id)s/unfollow/',
         'required': ['id'],
-        'access_token_required': True, 
+        'access_token_required': True,
         'method': 'delete',
         },
     'delete_group_document': {
@@ -303,8 +304,8 @@ methods = {
         'url': '/oapi/profiles/info/%(id)s/',
         'required': ['id'],
         'access_token_required': True,
-        'method': 'get',    
-        }, 
+        'method': 'get',
+        },
 
     'my_profile_info': {
         'url': '/oapi/profiles/info/me/',
